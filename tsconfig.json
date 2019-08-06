@@ -10,7 +10,7 @@
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "types": ["node"],
+    "types": ["node, mocha, chai"],
     "typeRoots": ["node_modules/@types"]
   },
   "include": ["./src/**/*.ts"],
