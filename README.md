@@ -1,7 +1,15 @@
-Nomen est Omen API
-==================
+# Nomen est Omen API
 
+Generate a random roman name.
 
-## Description
+## Requirements
 
-Generate a roman name.
+- NodeJS >= v14
+
+## Development
+
+Start the app with:
+
+```sh
+npm start start:dev
+```
