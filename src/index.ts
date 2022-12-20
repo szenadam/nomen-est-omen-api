@@ -3,7 +3,7 @@ import { Application, Response, Request } from "express";
 import * as morgan from 'morgan';
 
 const app: Application = express();
-const port: number = 3000;
+const port: string | number = process.env.PORT || 3000;
 
 const db: IRomanNameDb = require('../data/roman-names.json');
 const {praenomines, nomines, cognomines } = db;

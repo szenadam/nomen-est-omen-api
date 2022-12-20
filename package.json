@@ -2,7 +2,7 @@
   "name": "nomen-est-omen-api",
   "version": "1.0.0",
   "description": "Roman name generator API",
-  "main": "build/start.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "none",
     "start:dev": "cross-env NODE_ENV=development && nodemon --config \"./nodemon.json\"/",
