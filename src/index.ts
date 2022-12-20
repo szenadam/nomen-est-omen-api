@@ -15,7 +15,7 @@ interface IPraenomen {
 }
 
 interface INomen {
-  nomen: string;
+  name: string;
   source: string;
 }
 
@@ -53,7 +53,7 @@ app.get("/roman/name", (_: Request, res: Response) => {
   const praenomen = praenomines[Math.floor(Math.random() * praenomines.length)]
   const nomen = nomines[Math.floor(Math.random() * nomines.length)]
   const cognomen = cognomines[Math.floor(Math.random() * cognomines.length)]
-  res.json({ name: `${praenomen.name} ${nomen.nomen} ${cognomen.name}` });
+  res.json({ name: `${praenomen.name} ${nomen.name} ${cognomen.name}` });
 });
 
 app.listen(port, () => console.log(`API is listening on port ${port}!`));
