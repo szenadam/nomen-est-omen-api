@@ -6,8 +6,8 @@ COPY package*.json ./
 
 RUN npm install
 
-ADD ./build /usr/src/app/build
-ADD ./data /usr/src/app/data
+ADD ./build ./build
+ADD ./data ./data
 
 CMD ["node", "./build/index.js"]
 
