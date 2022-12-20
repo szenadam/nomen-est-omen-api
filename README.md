@@ -16,6 +16,14 @@ npm start start:dev
 
 ## Docker
 
+First build the app:
+
+```sh
+npm run build
+```
+
+Then build the Docker image:
+
 ```sh
 docker build . -t yourname/nomen-est-omen-api
 ```
@@ -23,5 +31,5 @@ docker build . -t yourname/nomen-est-omen-api
 Then to run:
 
 ```sh
-docker run -p 8080:3000 -d yourname/nomen-est-omen-api
+docker run -p 3000:3000 -d yourname/nomen-est-omen-api
 ```
