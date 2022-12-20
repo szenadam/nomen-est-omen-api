@@ -1,0 +1,8 @@
+{
+  "appService.zipIgnorePattern": [
+    "node_modules{,/**}",
+    ".vscode{,/**}"
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/09934cd3-a3a0-4c82-9ba2-a552794572f1/AppServices/subscriptions/09934cd3-a3a0-4c82-9ba2-a552794572f1/resourceGroups/rg-sandbox/providers/Microsoft.Web/sites/nomen-est-omen-api",
+  "appService.deploySubpath": "."
+}
