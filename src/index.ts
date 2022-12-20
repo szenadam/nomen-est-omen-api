@@ -36,7 +36,20 @@ app.get("/", (_: Request, res: Response) => {
   res.json({ status: 'ok' })
 });
 
-app.get("/name", (_: Request, res: Response) => {
+app.get("/roman/stat", (_:Request, res: Response) => {
+  const praenomenCount = praenomines.length;
+  const nomenCount = nomines.length;
+  const cognomenCount = cognomines.length;
+  res.json({
+    praenomenCount,
+    nomenCount,
+    cognomenCount,
+    total: praenomenCount + nomenCount + cognomenCount,
+    totalAvailableFullNames: praenomenCount * nomenCount * cognomenCount
+  })
+})
+
+app.get("/roman/name", (_: Request, res: Response) => {
   const praenomen = praenomines[Math.floor(Math.random() * praenomines.length)]
   const nomen = nomines[Math.floor(Math.random() * nomines.length)]
   const cognomen = cognomines[Math.floor(Math.random() * cognomines.length)]
