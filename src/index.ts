@@ -1,5 +1,6 @@
 import express = require("express");
 import { Application, Response, Request } from "express";
+import * as morgan from 'morgan';
 
 const app: Application = express();
 const port: number = 3000;
@@ -10,8 +11,10 @@ interface IRomanName {
   cognomen: string;
 }
 
+app.use(morgan('combined'));
+
 app.get("/", (_: Request, res: Response) => {
-  res.json({status: 'ok'})
+  res.json({ status: 'ok' })
 });
 
 app.get("/name", (_: Request, res: Response) => {
@@ -20,7 +23,7 @@ app.get("/name", (_: Request, res: Response) => {
     nomen: "Flavius",
     cognomen: "Petro"
   }
-  res.json({name: `${name.praenomen} ${name.nomen} ${name.cognomen}`});
+  res.json({ name: `${name.praenomen} ${name.nomen} ${name.cognomen}` });
 });
 
 app.listen(port, () => console.log(`API is listening on port ${port}!`));
