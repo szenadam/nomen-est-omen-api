@@ -5,7 +5,7 @@
   "main": "build/start.js",
   "scripts": {
     "test": "none",
-    "start-dev": "cross-env NODE_ENV=development && nodemon --config \"./nodemon.json\"/",
+    "start:dev": "cross-env NODE_ENV=development && nodemon --config \"./nodemon.json\"/",
     "build": "rimraf ./build/ && tsc",
     "start": "node build/start.js"
   },
@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/szenadam/nomen-est-omen-api/issues"
   },
